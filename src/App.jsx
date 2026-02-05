@@ -187,24 +187,29 @@ const proyectos = [
 
   <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
     <div className="max-w-2xl">
-      <h1 className="text-5xl md:text-7xl font-black text-white italic mb-4 uppercase tracking-tighter leading-[0.9]">
-        Alojamiento <br />
-        <span className="text-cruxCeleste">Corporativo</span>
-      </h1>
-      <p className="text-white text-lg md:text-xl mb-8 font-light italic border-l-2 border-cruxCeleste pl-4">
-        Estrategia y confort en el epicentro de Vaca Muerta. <br />
-        Unidades ejecutivas para personal jerárquico en Añelo.
-      </p>
- <div className="flex flex-wrap gap-4">
-  {/* Este link baja a la sección de complejos */}
-  <a href="#proyectos" className="bg-cruxCeleste hover:bg-white hover:text-cruxAzul text-white px-8 py-4 rounded font-bold transition-all uppercase tracking-widest text-xs shadow-lg">
+     {/* Título con resalte */}
+{/* Título: Ajustamos text-4xl en móvil y leading para que no se encimen las líneas */}
+<h1 className="text-4xl md:text-7xl font-black uppercase italic leading-[0.95] md:leading-[0.9] mb-4 md:mb-6 drop-shadow-md">
+  <span className="text-[#00d1ff]">Alquiler</span> <br />
+  <span className="text-white">de Alojamiento</span> <br />
+  <span className="text-gray-300">Corporativo</span>
+</h1>
+
+{/* Texto de bajada: Un poco más chico en móvil para ganar espacio */}
+<p className="text-base md:text-xl font-medium text-white/90 max-w-xl border-l-4 border-[#00d1ff] pl-4 mb-6 md:mb-0">
+  Estrategia y confort en el <span className="text-[#00d1ff] font-bold">epicentro de Vaca Muerta</span>. 
+  Unidades ejecutivas para personal jerárquico en Añelo.
+</p>
+
+{/* Botones: mt-6 en móvil para que no se peguen, mt-10 en desktop */}
+<div className="flex flex-col sm:flex-row gap-3 mt-6 md:mt-10">
+  <a href="#proyectos" className="w-full sm:w-auto bg-[#00d1ff] hover:bg-white hover:text-[#002D57] text-[#002D57] px-6 py-3 md:px-8 md:py-4 rounded font-bold transition-all uppercase tracking-widest text-[10px] md:text-xs shadow-lg text-center">
     Ver Complejos Disponibles
   </a>
   
-  {/* Este link va directo al WhatsApp de reservas */}
-  <a href="https://wa.me/541151454104?text=Hola!%20Solicito%20cotización%20por%20alojamiento%20corporativo." 
+  <a href="https://wa.me/541151454104?text=Hola!..." 
      target="_blank" 
-     className="bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white hover:text-cruxAzul px-8 py-4 rounded font-bold transition-all uppercase tracking-widest text-xs">
+     className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white hover:text-[#002D57] px-6 py-3 md:px-8 md:py-4 rounded font-bold transition-all uppercase tracking-widest text-[10px] md:text-xs text-center">
     Consultar Disponibilidad
   </a>
 </div>
@@ -353,6 +358,78 @@ const proyectos = [
     </div>
   </div>
 </section>
+
+    {/* SECCIÓN clientes */}
+<section className="bg-gray-50 py-20">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="text-center mb-12">
+      <h2 className="text-2xl md:text-3xl font-black text-[#002D57] uppercase italic tracking-tight">
+        Empresas que <span className="text-[#00d1ff]">confían en nosotros</span>
+      </h2>
+      <div className="h-1.5 w-24 bg-[#00d1ff] mx-auto mt-4"></div>
+    </div>
+
+    {/* Contenedor con logos más grandes */}
+    <div className="flex flex-wrap md:flex-nowrap justify-center items-center gap-10 md:gap-14 lg:gap-20">
+      
+      {/* Servipet */}
+      <div className="w-[140px] md:w-auto flex justify-center group">
+        <img 
+          src="/clientes/Servipet.jpg" 
+          alt="Servipet" 
+          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+        />
+      </div>
+      
+      {/* AESA */}
+      <div className="w-[140px] md:w-auto flex justify-center group">
+        <img 
+          src="/clientes/AESA.jpeg" 
+          alt="AESA" 
+          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+        />
+      </div>
+
+      {/* Conevial */}
+      <div className="w-[140px] md:w-auto flex justify-center group">
+        <img 
+          src="/clientes/conevial.png" 
+          alt="Conevial" 
+          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+        />
+      </div>
+
+      {/* Coivalsa */}
+      <div className="w-[140px] md:w-auto flex justify-center group">
+        <img 
+          src="/clientes/coivalsa.jpg" 
+          alt="Coivalsa" 
+          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+        />
+      </div>
+
+      {/* Aislaciones Quilmes */}
+      <div className="w-[140px] md:w-auto flex justify-center group">
+        <img 
+          src="/clientes/Aislaciones Quilmes.jpg" 
+          alt="Aislaciones Quilmes" 
+          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+        />
+      </div>
+
+      {/* Indarsa */}
+      <div className="w-[140px] md:w-auto flex justify-center group">
+        <img 
+          src="/clientes/indarsa.png" 
+          alt="Indarsa" 
+          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
+
 {/* SECCIÓN SERVICIOS (Formato Original - Íconos XL) */}
 <section id="servicios" className="py-20 bg-white border-t border-slate-100">
   <div className="max-w-6xl mx-auto px-6">
@@ -363,8 +440,7 @@ const proyectos = [
       </h2>
     </div>
 
-    {/* Grilla más compacta con gap-x-4 */}
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-12 gap-x-4 text-center">
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-y-12 gap-x-4 text-center">
       
       {/* 1. BAÑOS EN SUITE */}
       <div>
@@ -407,11 +483,29 @@ const proyectos = [
         <div className="text-[#00d1ff] mb-3 flex justify-center">
           <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
         </div>
-        <h4 className="font-bold text-[#002D57] text-[11px] uppercase tracking-widest leading-tight">AA Inverter + Cable</h4>
+        <h4 className="font-bold text-[#002D57] text-[11px] uppercase tracking-widest leading-tight">AA Inverter</h4>
         <p className="text-[9px] text-slate-400 mt-1 font-bold">CLIMATIZACIÓN</p>
       </div>
 
-      {/* 6. COCHERA PRIVADA */}
+      {/* 6. TV POR CABLE */}
+      <div>
+        <div className="text-[#00d1ff] mb-3 flex justify-center">
+          <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        </div>
+        <h4 className="font-bold text-[#002D57] text-[11px] uppercase tracking-widest leading-tight">TV por Cable</h4>
+        <p className="text-[9px] text-slate-400 mt-1 font-bold">ENTRETENIMIENTO</p>
+      </div>
+
+      {/* 7. CARPINTERÍA DVH */}
+      <div>
+        <div className="text-[#00d1ff] mb-3 flex justify-center">
+          <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 5h16v14H4z M4 12h16 M12 5v14"></path></svg>
+        </div>
+        <h4 className="font-bold text-[#002D57] text-[11px] uppercase tracking-widest leading-tight">Carpintería DVH</h4>
+        <p className="text-[9px] text-slate-400 mt-1 font-bold">AISLACIÓN PREMIUM</p>
+      </div>
+
+      {/* 8. COCHERA PRIVADA */}
       <div>
         <div className="text-[#00d1ff] mb-3 flex justify-center">
           <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
@@ -420,7 +514,7 @@ const proyectos = [
         <p className="text-[9px] text-slate-400 mt-1 font-bold">ESTACIONAMIENTO</p>
       </div>
 
-      {/* 7. PARRILLA PRIVADA */}
+      {/* 9. PARRILLA PRIVADA */}
       <div>
         <div className="text-[#00d1ff] mb-3 flex justify-center">
           <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
@@ -429,7 +523,7 @@ const proyectos = [
         <p className="text-[9px] text-slate-400 mt-1 font-bold">EXCLUSIVO</p>
       </div>
 
-      {/* 8. SEGURIDAD */}
+      {/* 10. SEGURIDAD */}
       <div>
         <div className="text-[#00d1ff] mb-3 flex justify-center">
           <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04"></path></svg>
@@ -438,7 +532,7 @@ const proyectos = [
         <p className="text-[9px] text-slate-400 mt-1 font-bold">MONITOREO</p>
       </div>
 
-      {/* 9. CONTROL DE PLAGAS */}
+      {/* 11. CONTROL DE PLAGAS */}
       <div>
         <div className="text-[#00d1ff] mb-3 flex justify-center">
           <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
@@ -447,7 +541,7 @@ const proyectos = [
         <p className="text-[9px] text-slate-400 mt-1 font-bold">SANITIZACIÓN</p>
       </div>
 
-      {/* 10. SERVICIOS COMPLETOS */}
+      {/* 12. SERVICIOS COMPLETOS */}
       <div>
         <div className="text-[#00d1ff] mb-3 flex justify-center">
           <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h8a1 1 0 001-1z"></path></svg>
