@@ -1,6 +1,7 @@
 import React from 'react';
 import { MessageCircle, MapPin, ChevronRight } from 'lucide-react';
 
+
 function App() {
  
   const [proyectoActivo, setProyectoActivo] = React.useState(null);
