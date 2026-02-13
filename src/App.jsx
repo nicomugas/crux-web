@@ -38,13 +38,13 @@ const proyectos = [
        gallery: [
        "/proyectos/roots-2/galeria1.jpeg",
       "/proyectos/roots-2/galeria2.jpeg",
-      "/proyectos/roots-2/galeria3.jpg",
-      "/proyectos/roots-2/galeria4.jpg",
-      "/proyectos/roots-2/galeria5.jpg",
-      "/proyectos/roots-2/galeria6.jpg",
-      "/proyectos/roots-2/galeria7.jpg",
-      "/proyectos/roots-2/galeria8.jpg",
-      "/proyectos/roots-2/galeria9.jpg"
+      "/proyectos/roots-2/galeria3.jpeg",
+      "/proyectos/roots-2/galeria4.jpeg",
+      "/proyectos/roots-2/galeria5.jpeg",
+      "/proyectos/roots-2/galeria6.jpeg",
+      "/proyectos/roots-2/galeria7.jpeg",
+      "/proyectos/roots-2/galeria8.jpeg",
+      "/proyectos/roots-2/galeria9.jpeg"
       
     ],
     tags: ["versatil", "18 Plazas"],
