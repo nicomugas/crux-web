@@ -399,12 +399,28 @@ const proyectos = [
           className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
         />
       </div>
+       {/* SNF */}
+      <div className="w-[140px] md:w-auto flex justify-center group">
+        <img 
+          src="/clientes/SNF.jpg" 
+          alt="SNF" 
+          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+        />
+      </div>
 
       {/* Coivalsa */}
       <div className="w-[140px] md:w-auto flex justify-center group">
         <img 
           src="/clientes/coivalsa.jpg" 
           alt="Coivalsa" 
+          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+        />
+      </div>
+       {/* Tetra */}
+      <div className="w-[140px] md:w-auto flex justify-center group">
+        <img 
+          src="/clientes/tetra.png" 
+          alt="tetra" 
           className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
         />
       </div>
@@ -423,6 +439,15 @@ const proyectos = [
         <img 
           src="/clientes/indarsa.png" 
           alt="Indarsa" 
+          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+        />
+      </div>
+
+      {/* r&a */}
+      <div className="w-[140px] md:w-auto flex justify-center group">
+        <img 
+          src="/clientes/rya.jpeg" 
+          alt="R&A servicios" 
           className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
         />
       </div>
