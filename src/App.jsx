@@ -60,7 +60,7 @@ const proyectos = [
     youtubeId: "PzbyVxCtV-U",
     image: "/proyectos/roots-3/principal.jpeg", // Asegúrate de tener la foto real aquí
        gallery: [
-      "/proyectos/roots-3/galeria1.jpeg",
+      "/proyectos/roots-3/galeria1.jpg",
       "/proyectos/roots-3/galeria2.jpeg",
       "/proyectos/roots-3/galeria3.jpeg",
       "/proyectos/roots-3/galeria4.jpeg",
