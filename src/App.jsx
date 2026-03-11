@@ -13,6 +13,7 @@ const proyectos = [
     loc: "Casco Urbano", 
     status: "FINALIZADO", 
     desc: "4 Departos de 100m² ubicados en dos plantas. 16 plazas totales. 100% de ocupación sostenida. A 100 metros de ruta 7.",
+    youtubeId: "E8K6Jw56VT4",
     image: "/proyectos/roots-1/portada.png",
     gallery: [
       "/proyectos/roots-1/galeria1.jpeg",
@@ -34,6 +35,7 @@ const proyectos = [
     loc: "Casco Urbano", 
     status: "FINALIZADO", 
     desc: "3 Departamentos de 60m² mas 1 Departamento de 88 mts para 6 personas. Excelente ubicacion a 150 metros de ruta 7.",
+    youtubeId: "VVBTtPySBow",
     image: "/proyectos/roots-2/portada.jpeg",
        gallery: [
        "/proyectos/roots-2/galeria1.jpeg",
@@ -55,6 +57,7 @@ const proyectos = [
     loc: "La Meseta / Ruta 17", 
     status: "FINALIZADO", 
     desc: "Unidades de 60m² con baño en suite. Ubicación estratégica para logística, a 200 metrs de la Ruta 17, en la Meseta. Nuevo!",
+    youtubeId: "PzbyVxCtV-U",
     image: "/proyectos/roots-3/principal.jpeg", // Asegúrate de tener la foto real aquí
        gallery: [
       "/proyectos/roots-3/galeria1.jpeg",
@@ -74,6 +77,7 @@ const proyectos = [
     loc: "Casco Urbano (Barrio Mirador)", 
     status: "EN OBRA - MARZO 2026", 
     desc: "4 Unidades Funcionales de ~55m² y 1 Unidad de ~87m². Incluye cocheras, parrilla propia y mobiliario completo premium.",
+    youtubeId: "",
     image: "/proyectos/roots-4/portada.png",
        gallery: [
       "/proyectos/roots-4/galeria1.jpeg",
@@ -262,7 +266,7 @@ const proyectos = [
     
 
       {/* PROYECTOS */}
-      <section id="proyectos" className="py-20 px-6 max-w-7xl mx-auto">
+    <section id="proyectos" className="py-20 px-6 max-w-7xl mx-auto">
         <div className="mb-12 border-l-4 border-cyan-400 pl-6">
           <h2 className="text-3xl font-black text-[#003366] italic uppercase">Ecosistema Roots</h2>
           <p className="text-slate-500 uppercase text-xs tracking-widest font-bold">Nuestros Complejos</p>
@@ -310,6 +314,7 @@ const proyectos = [
           ))}
         </div>
       </section>
+
 
 
       {/* SECCIÓN UBICACIÓN ESTRATÉGICA */}
@@ -715,100 +720,125 @@ const proyectos = [
 </a>
 
 {/* VENTANA MODAL */}
+
+{/* VENTANA MODAL DE DETALLES */}
 {proyectoActivo && (
-  <div className="fixed inset-0 z-[2000000] flex items-start justify-center p-0 md:p-4 bg-black/90 backdrop-blur-sm overflow-y-auto pt-[130px] md:pt-[140px]">
-    <div className="bg-white w-full max-w-6xl h-auto md:h-[85vh] overflow-hidden md:rounded-xl shadow-2xl flex flex-col mb-10">
+  <div className="fixed inset-0 z-[2000000] flex items-center justify-center bg-black/90 backdrop-blur-sm p-0 md:p-6" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    
+    <div className="bg-white w-full max-w-7xl shadow-2xl md:rounded-xl overflow-hidden flex flex-col" 
+         style={{ display: 'flex', flexDirection: 'column', height: '90vh', width: '95%' }}>
       
-      {/* CABECERA (Header) - Ahora será visible siempre */}
-      <div className="p-4 border-b flex justify-between items-center bg-white z-10 sticky top-0">
+      {/* HEADER */}
+      <div className="border-b flex justify-between items-center px-6 bg-white shrink-0" style={{ height: '70px', display: 'flex', minHeight: '70px' }}>
         <div>
-          <h2 className="text-xl font-black text-[#002D57] uppercase italic">{proyectoActivo.name}</h2>
-          <p className="text-[10px] text-[#00d1ff] font-bold tracking-widest">{proyectoActivo.loc}</p>
+          <h2 className="text-xl font-black text-[#002D57] uppercase italic leading-none">{proyectoActivo.name}</h2>
+          <p className="text-[10px] text-[#00d1ff] font-bold tracking-widest mt-1">{proyectoActivo.loc}</p>
         </div>
-        <button 
-          onClick={() => setProyectoActivo(null)} 
-          className="p-2 text-slate-400 hover:text-[#002D57] transition-colors"
-        >
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
+        <button onClick={() => setProyectoActivo(null)} className="text-slate-400 hover:text-red-600">
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
       </div>
 
-      {/* CUERPO CON DOS COLUMNAS FORZADAS */}
-      <div className="flex-grow overflow-hidden">
-        <div style={{ display: 'flex', flexDirection: window.innerWidth > 768 ? 'row' : 'column', height: '100%' }}>
-          
-          {/* COLUMNA IZQUIERDA: GALERÍA (Scroll independiente) */}
-          <div style={{ 
-            width: window.innerWidth > 768 ? '65%' : '100%', 
-            overflowY: 'auto', 
-            padding: '2rem',
-            backgroundColor: '#f8fafc'
-          }}>
-            <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6 text-center md:text-left">Galería de la Unidad</h4>
-            <div className="flex flex-col gap-6">
-              {proyectoActivo.gallery?.map((foto, index) => (
-                <div key={index} className="rounded-lg overflow-hidden shadow-lg border bg-white">
-                  <img 
-                    src={foto} 
-                    className="w-full h-auto object-cover" 
-                    alt={`Ambiente ${index + 1}`}
-                    onError={(e) => { e.target.style.display = 'none'; }} 
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* COLUMNA DERECHA: FICHA DE DATOS */}
-          <div style={{ 
-            width: window.innerWidth > 768 ? '35%' : '100%', 
-            padding: '2rem',
-            borderLeft: '1px solid #e2e8f0',
-            backgroundColor: 'white',
-            display: 'flex',
-            flexDirection: 'column'
-          }}>
-            <div className="space-y-6">
-              <div className="bg-[#002D57] text-white p-4 rounded-lg italic">
-                <span className="text-[9px] font-black uppercase opacity-70">Estado del complejo</span>
-                <p className="font-bold uppercase tracking-tighter">{proyectoActivo.status}</p>
-              </div>
-
-              <div className="space-y-4">
-                <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest border-b pb-2">Equipamiento y Servicios</h4>
-                <ul className="space-y-3">
-                  {proyectoActivo.servicios?.map((s, i) => (
-                    <li key={i} className="flex items-center gap-2 text-xs font-bold text-[#002D57] uppercase italic">
-                      <span className="w-1.5 h-1.5 bg-[#00d1ff] rounded-full"></span>
-                      {s}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="pt-6">
-                <a 
-                  href={`https://wa.me/541151454104?text=Consulta%20alojamiento%20${proyectoActivo.name}`}
-                  target="_blank"
-                  className="block w-full bg-[#25D366] text-white text-center py-4 rounded font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:bg-[#128C7E] transition-all"
-                >
-                  Consultar Disponibilidad
-                </a>
-                <p className="text-[9px] text-slate-400 text-center mt-4 italic font-medium">
-                  Ideal para personal jerárquico y equipos técnicos.
-                </p>
+      {/* CUERPO CON DOS COLUMNAS REALES (USANDO DISPLAY: GRID INLINE) */}
+      <div style={{ 
+        display: 'grid', 
+        gridTemplateColumns: window.innerWidth > 768 ? '65% 35%' : '100%',
+        flexGrow: 1,
+        overflow: 'hidden',
+        height: 'calc(100% - 70px)'
+      }}>
+        
+        {/* COLUMNA IZQUIERDA: MULTIMEDIA */}
+        <div style={{ 
+          height: '100%', 
+          overflowY: 'auto', 
+          backgroundColor: '#f8fafc', 
+          padding: '2rem',
+          borderRight: '1px solid #e2e8f0'
+        }}>
+          {/* VIDEO */}
+          {proyectoActivo.youtubeId && (
+            <div style={{ marginBottom: '2.5rem' }}>
+              <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Video Recorrido</h4>
+              <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', backgroundColor: '#000', borderRadius: '8px' }}>
+                <iframe
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                  src={`https://www.youtube.com/embed/${proyectoActivo.youtubeId}?rel=0`}
+                  title={proyectoActivo.name}
+                  frameBorder="0"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
-          </div>
+          )}
 
+          {/* GALERÍA */}
+          <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Galería de Imágenes</h4>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            {proyectoActivo.gallery?.map((foto, index) => (
+              <div key={index} style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #ddd', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}>
+                <img src={foto} style={{ width: '100%', display: 'block', height: 'auto' }} alt={`Vista ${index}`} />
+              </div>
+            ))}
+          </div>
         </div>
+
+        {/* COLUMNA DERECHA: INFORMACIÓN */}
+        <div style={{ 
+          height: '100%', 
+          overflowY: 'auto', 
+          backgroundColor: '#fff', 
+          padding: '2rem',
+          display: 'flex',
+          flexDirection: 'column'
+        }}>
+          <div style={{ marginBottom: '2rem', backgroundColor: '#002D57', padding: '1.25rem', borderRadius: '8px', color: '#fff', fontStyle: 'italic' }}>
+            <span style={{ fontSize: '9px', fontWeight: '900', textTransform: 'uppercase', opacity: 0.7 }}>Estado</span>
+            <p style={{ fontWeight: 'bold', textTransform: 'uppercase', fontSize: '1.125rem' }}>{proyectoActivo.status}</p>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div style={{ borderBottom: '1px solid #eee', paddingBottom: '0.5rem' }}>
+              <h4 style={{ fontSize: '10px', fontWeight: '900', color: '#94a3b8', textTransform: 'uppercase' }}>Equipamiento</h4>
+            </div>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {proyectoActivo.servicios?.map((s, i) => (
+                <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '11px', fontWeight: 'bold', color: '#002D57', textTransform: 'uppercase', fontStyle: 'italic' }}>
+                  <span style={{ width: '6px', height: '6px', backgroundColor: '#00d1ff', borderRadius: '50%' }}></span>
+                  {s}
+                </li>
+              ))}
+            </ul>
+
+            <div style={{ paddingTop: '1.5rem' }}>
+              <a 
+                href={`https://wa.me/541151454104?text=Consulta%20${proyectoActivo.name}`}
+                target="_blank"
+                style={{ 
+                  display: 'block', 
+                  width: '100%', 
+                  backgroundColor: '#25D366', 
+                  color: '#fff', 
+                  textAlign: 'center', 
+                  padding: '1.25rem 0', 
+                  borderRadius: '4px', 
+                  fontWeight: '900', 
+                  fontSize: '11px', 
+                  textTransform: 'uppercase', 
+                  textDecoration: 'none',
+                  letterSpacing: '0.1em'
+                }}
+              >
+                Consultar Disponibilidad
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 )}
-
 {/* FIN VENTAN MODAL */}
 
     </div>
