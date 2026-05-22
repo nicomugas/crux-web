@@ -365,6 +365,7 @@ const proyectos = [
   </div>
 </section>
    
+   
 {/* SECCIÓN CLIENTES */}
 <section className="bg-gray-50 py-20">
   <div className="max-w-6xl mx-auto px-6">
