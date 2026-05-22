@@ -364,112 +364,125 @@ const proyectos = [
     </div>
   </div>
 </section>
-
-    {/* SECCIÓN clientes */}
+   
+{/* SECCIÓN CLIENTES */}
 <section className="bg-gray-50 py-20">
-  <div className="max-w-7xl mx-auto px-6">
-    <div className="text-center mb-12">
+  <div className="max-w-6xl mx-auto px-6">
+    <div className="text-center mb-16">
       <h2 className="text-2xl md:text-3xl font-black text-[#002D57] uppercase italic tracking-tight">
         Empresas que <span className="text-[#00d1ff]">confían en nosotros</span>
       </h2>
       <div className="h-1.5 w-24 bg-[#00d1ff] mx-auto mt-4"></div>
     </div>
 
-    {/* Contenedor con logos más grandes */}
-    <div className="flex flex-wrap md:flex-nowrap justify-center items-center gap-10 md:gap-14 lg:gap-20">
+    {/* CONTENEDOR PRINCIPAL DE FILAS */}
+    <div className="space-y-12 md:space-y-16">
       
-      {/* Servipet */}
-      <div className="w-[140px] md:w-auto flex justify-center group">
-        <img 
-          src="/clientes/Servipet.jpg" 
-          alt="Servipet" 
-          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
-        />
-      </div>
-      
-      {/* AESA */}
-      <div className="w-[140px] md:w-auto flex justify-center group">
-        <img 
-          src="/clientes/AESA.jpeg" 
-          alt="AESA" 
-          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
-        />
-      </div>
-
-      {/* Conevial */}
-      <div className="w-[140px] md:w-auto flex justify-center group">
-        <img 
-          src="/clientes/conevial.png" 
-          alt="Conevial" 
-          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
-        />
-      </div>
-       {/* SNF */}
-      <div className="w-[140px] md:w-auto flex justify-center group">
-        <img 
-          src="/clientes/SNF.jpg" 
-          alt="SNF" 
-          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
-        />
-      </div>
-
-      {/* Coivalsa */}
-      <div className="w-[140px] md:w-auto flex justify-center group">
-        <img 
-          src="/clientes/coivalsa.jpg" 
-          alt="Coivalsa" 
-          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
-        />
-      </div>
-       {/* Tetra */}
-      <div className="w-[140px] md:w-auto flex justify-center group">
-        <img 
-          src="/clientes/tetra.png" 
-          alt="tetra" 
-          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
-        />
+      {/* FILA 1 (4 logos) */}
+      <div className="flex flex-wrap md:flex-nowrap justify-center items-center gap-10 md:gap-16">
+        {/* Servipet */}
+        <div className="w-[130px] md:w-auto flex justify-center group">
+          <img 
+            src="/clientes/Servipet.jpg" 
+            alt="Servipet" 
+            className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+          />
+        </div>
+        {/* AESA */}
+        <div className="w-[130px] md:w-auto flex justify-center group">
+          <img 
+            src="/clientes/AESA.jpeg" 
+            alt="AESA" 
+            className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+          />
+        </div>
+        {/* Conevial */}
+        <div className="w-[130px] md:w-auto flex justify-center group">
+          <img 
+            src="/clientes/conevial.png" 
+            alt="Conevial" 
+            className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+          />
+        </div>
+        {/* SNF */}
+        <div className="w-[130px] md:w-auto flex justify-center group">
+          <img 
+            src="/clientes/SNF.jpg" 
+            alt="SNF" 
+            className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+          />
+        </div>
       </div>
 
-      {/* Aislaciones Quilmes */}
-      <div className="w-[140px] md:w-auto flex justify-center group">
-        <img 
-          src="/clientes/Aislaciones Quilmes.jpg" 
-          alt="Aislaciones Quilmes" 
-          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
-        />
+      {/* FILA 2 (4 logos) */}
+      <div className="flex flex-wrap md:flex-nowrap justify-center items-center gap-10 md:gap-16">
+        {/* Coivalsa */}
+        <div className="w-[130px] md:w-auto flex justify-center group">
+          <img 
+            src="/clientes/coivalsa.jpg" 
+            alt="Coivalsa" 
+            className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+          />
+        </div>
+        {/* Tetra */}
+        <div className="w-[130px] md:w-auto flex justify-center group">
+          <img 
+            src="/clientes/tetra.png" 
+            alt="tetra" 
+            className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+          />
+        </div>
+        {/* Aislaciones Quilmes */}
+        <div className="w-[130px] md:w-auto flex justify-center group">
+          <img 
+            src="/clientes/Aislaciones Quilmes.jpg" 
+            alt="Aislaciones Quilmes" 
+            className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+          />
+        </div>
+        {/* Indarsa */}
+        <div className="w-[130px] md:w-auto flex justify-center group">
+          <img 
+            src="/clientes/indarsa.png" 
+            alt="Indarsa" 
+            className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+          />
+        </div>
       </div>
 
-      {/* Indarsa */}
-      <div className="w-[140px] md:w-auto flex justify-center group">
-        <img 
-          src="/clientes/indarsa.png" 
-          alt="Indarsa" 
-          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
-        />
-      </div>
-
-      {/* r&a */}
-      <div className="w-[140px] md:w-auto flex justify-center group">
-        <img 
-          src="/clientes/rya.jpeg" 
-          alt="R&A servicios" 
-          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
-        />
-      </div>
-
-
+      {/* FILA 3 (3 logos) */}
+      <div className="flex flex-wrap md:flex-nowrap justify-center items-center gap-10 md:gap-16">
+        {/* r&a */}
+        <div className="w-[130px] md:w-auto flex justify-center group">
+          <img 
+            src="/clientes/rya.jpeg" 
+            alt="R&A servicios" 
+            className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+          />
+        </div>
         {/* rafa */}
-      <div className="w-[140px] md:w-auto flex justify-center group">
-        <img 
-          src="/clientes/rafa.jpg" 
-          alt="Rafa - Montajes Industriales" 
-          className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
-        />
+        <div className="w-[130px] md:w-auto flex justify-center group">
+          <img 
+            src="/clientes/rafa.jpg" 
+            alt="Rafa - Montajes Industriales" 
+            className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+          />
+        </div>
+        {/* don emilio */}
+        <div className="w-[130px] md:w-auto flex justify-center group">
+          <img 
+            src="/clientes/donemilio.png" 
+            alt="Don Emilio SRL" 
+            className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+          />
+        </div>
       </div>
 
     </div>
   </div>
 </section>
+
+
 
 {/* SECCIÓN SERVICIOS (Formato Original - Íconos XL) */}
 <section id="servicios" className="py-20 bg-white border-t border-slate-100">
