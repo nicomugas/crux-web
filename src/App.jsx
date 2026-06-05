@@ -224,45 +224,66 @@ const proyectos = [
 
 {/* BLOQUE CIFRAS DE VALOR */}
 <div className="relative z-20 px-6">
-  <div 
-    className="bg-white py-8 px-4 shadow-2xl max-w-7xl mx-auto rounded-xl text-center border-b-4 border-[#00d1ff]"
-    style={{ 
-      display: 'flex',
-      flexDirection: 'row',
-      flexWrap: 'nowrap',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      marginTop: '-15px', // Bajamos el bloque de -40px a -15px para despegarlo del botón
-      width: '100%'
-    }}
-  >
+  
+  {/* Inyectamos estilos CSS nativos para asegurar el comportamiento por dispositivo */}
+  <style dangerouslySetInnerHTML={{__html: `
+    .cifras-container {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 2rem 1rem !important;
+      margin-top: -15px !important;
+      width: 100% !important;
+    }
+    .cifra-item-divider {
+      border-left: none !important;
+    }
+    .cifra-item-last {
+      grid-column: span 2 !important;
+    }
+
+    /* PANTALLAS GRANDES (PC / ESCRITORIO) */
+    @media (min-width: 768px) {
+      .cifras-container {
+        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+        gap: 1rem !important;
+      }
+      .cifra-item-divider {
+        border-left: 1px solid #f1f5f9 !important;
+      }
+      .cifra-item-last {
+        grid-column: auto !important;
+      }
+    }
+  `}} />
+
+  <div className="bg-white py-8 px-4 shadow-2xl max-w-7xl mx-auto rounded-xl text-center border-b-4 border-[#00d1ff] cifras-container">
     
     {/* DATO 1: METROS */}
-    <div style={{ flex: '1 1 0%', minWidth: '0px', padding: '0 4px' }}>
+    <div className="flex flex-col justify-center px-2">
       <p className="text-xl md:text-2xl lg:text-3xl font-black text-[#002D57] leading-none">1500m²</p>
       <p className="text-[9px] uppercase tracking-[0.15em] text-slate-500 font-bold mt-3">Desarrollados</p>
     </div>
 
     {/* DATO 2: COMPLEJOS */}
-    <div style={{ flex: '1 1 0%', minWidth: '0px', padding: '0 4px', borderLeft: '1px solid #f1f5f9' }}>
+    <div className="flex flex-col justify-center px-2 cifra-item-divider">
       <p className="text-xl md:text-2xl lg:text-3xl font-black text-[#002D57] leading-none">4</p>
       <p className="text-[9px] uppercase tracking-[0.15em] text-slate-500 font-bold mt-3">Complejos Finalizados</p>
     </div>
 
     {/* DATO 3: SISTEMA CONSTRUCTIVO */}
-    <div style={{ flex: '1 1 0%', minWidth: '0px', padding: '0 4px', borderLeft: '1px solid #f1f5f9' }}>
+    <div className="flex flex-col justify-center px-2 cifra-item-divider">
       <p className="text-xl md:text-2xl lg:text-3xl font-black text-[#00d1ff] leading-none">100%</p>
       <p className="text-[9px] uppercase tracking-[0.15em] text-[#002D57] font-black mt-3">Construcción Tradicional</p>
     </div>
 
     {/* DATO 4: CAMAS */}
-    <div style={{ flex: '1 1 0%', minWidth: '0px', padding: '0 4px', borderLeft: '1px solid #f1f5f9' }}>
+    <div className="flex flex-col justify-center px-2 cifra-item-divider">
       <p className="text-xl md:text-2xl lg:text-3xl font-black text-[#002D57] leading-none">72</p>
       <p className="text-[9px] uppercase tracking-[0.15em] text-slate-500 font-bold mt-3">Camas Administradas</p>
     </div>
 
     {/* DATO 5: ATENCIÓN / RESPUESTA CORPORATIVA */}
-    <div style={{ flex: '1 1 0%', minWidth: '0px', padding: '0 4px', borderLeft: '1px solid #f1f5f9' }}>
+    <div className="flex flex-col justify-center px-2 cifra-item-divider cifra-item-last">
       <div className="flex items-center justify-center gap-1">
         <span className="flex h-1.5 w-1.5 rounded-full bg-[#00d1ff] animate-pulse"></span>
         <p className="text-xl md:text-2xl lg:text-3xl font-black text-[#002D57] leading-none">24/7</p>
@@ -272,7 +293,6 @@ const proyectos = [
 
   </div>
 </div>
-
       {/* PROYECTOS */}
     <section id="proyectos" className="py-20 px-6 max-w-7xl mx-auto">
         <div className="mb-12 border-l-4 border-cyan-400 pl-6">
