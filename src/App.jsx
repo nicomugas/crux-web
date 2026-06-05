@@ -77,7 +77,7 @@ const proyectos = [
     loc: "Casco Urbano (Barrio Mirador)", 
     status: "FINALIZADO", 
     desc: "4 Unidades Funcionales de ~55m² y 1 Unidad de ~87m². Incluye cocheras, parrilla propia y mobiliario completo premium.",
-    youtubeId: "BydNmEBlwho",
+    youtubeId: "qRFls63rKX4",
     image: "/proyectos/roots-4/portada.png",
        gallery: [
       "/proyectos/roots-4/foto1.jpeg",
