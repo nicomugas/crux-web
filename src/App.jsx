@@ -136,6 +136,10 @@ const proyectos = [
       <a href="#proyectos" style={{ color: '#FFFFFF', textDecoration: 'none', fontSize: '13px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '2px' }}>Complejos</a>
       <a href="#ubicacion" style={{ color: '#FFFFFF', textDecoration: 'none', fontSize: '13px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '2px' }}>Ubicación</a>
       <a href="#servicios" style={{ color: '#FFFFFF', textDecoration: 'none', fontSize: '13px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '2px' }}>Servicios</a>
+      
+      {/* NUEVO BOTÓN: INVERTIR (DESKTOP) */}
+      <a href="#invertir" style={{ color: '#00d1ff', textDecoration: 'none', fontSize: '13px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '2px' }}>Invertir</a>
+      
       <a 
         href="https://wa.me/541151454104" 
         target="_blank"
@@ -174,6 +178,10 @@ const proyectos = [
     }}>
       <a href="#proyectos" onClick={() => setMenuAbierto(false)} style={{ color: '#FFFFFF', textDecoration: 'none', fontWeight: '900', fontSize: '20px' }}>COMPLEJOS</a>
       <a href="#ubicacion" onClick={() => setMenuAbierto(false)} style={{ color: '#FFFFFF', textDecoration: 'none', fontWeight: '900', fontSize: '20px' }}>UBICACIÓN</a>
+      
+      {/* NUEVO BOTÓN: INVERTIR (MÓVIL) */}
+      <a href="#invertir" onClick={() => setMenuAbierto(false)} style={{ color: '#00d1ff', textDecoration: 'none', fontWeight: '900', fontSize: '20px' }}>INVERTIR</a>
+      
       <a href="https://wa.me/541151454104" style={{ backgroundColor: '#00d1ff', color: '#002D57', padding: '18px', borderRadius: '5px', textDecoration: 'none', fontWeight: '900' }}>WHATSAPP</a>
     </div>
   )}
@@ -634,6 +642,145 @@ const proyectos = [
       </div>
 
     </div>
+  </div>
+</section>
+
+{/* SECCIÓN INVERTIR EN VACA MUERTA */}
+<section id="invertir" className="bg-white py-24 scroll-mt-20">
+  <div className="max-w-7xl mx-auto px-6">
+    
+    {/* 1. TÍTULO PRINCIPAL Y BAJADA */}
+    <div className="max-w-4xl mx-auto text-center mb-20">
+      <span className="text-[10px] bg-[#002D57] text-[#00d1ff] font-black uppercase tracking-[0.25em] px-4 py-1.5 rounded-full italic">
+        Oportunidad Exclusiva
+      </span>
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#002D57] uppercase italic tracking-tight mt-6 leading-tight">
+        Oportunidades de Inversión en Vaca Muerta, <br className="hidden md:inline"/>
+        <span className="text-[#00d1ff]">RENTA INMEDIATA</span>, PROYECTOS FINALIZADOS EN LAS MEJORES UBICACIONES DE AÑELO.
+      </h2>
+      <div className="h-1.5 w-24 bg-[#00d1ff] mx-auto mt-6 mb-6"></div>
+      <p className="text-sm md:text-base text-slate-600 font-bold uppercase tracking-wide max-w-2xl mx-auto italic">
+        Rentabilidad real <span className="text-[#002D57]">EN TU CUENTA BANCARIA</span>. NOS ENCARGAMOS DE LA GESTION CORPORATIVA INTEGRAL DE LOS PROYECTOS.
+      </p>
+    </div>
+
+    {/* 2. LOS TRES PILARES DE LA INVERSIÓN (TARJETAS) */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+      
+      {/* Pilar 1: Propiedad Real */}
+      <div className="bg-slate-50 p-8 rounded-2xl border-b-4 border-[#002D57] shadow-lg hover:shadow-xl transition-all flex flex-col justify-between">
+        <div>
+          <div className="w-12 h-12 bg-[#002D57] rounded-xl flex items-center justify-center mb-6 text-[#00d1ff]">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0V11m0 0H9m11-4a2 2 0 11-4 0 2 2 0 014 0zM7 7l3 3m0 0l3-3m-3 3v8"></path>
+            </svg>
+          </div>
+          <h3 className="text-lg font-black text-[#002D57] uppercase italic mb-4">Propiedad Real (No es Pool de Renta)</h3>
+          <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-medium">
+            Tu capital está respaldado por activos tangibles y seguros. Aquí no invertís en un fondo común abstracto ni en un pool de rentas difuso: 
+            <strong className="text-[#002D57]"> sos el dueño directo y absoluto de tu departamento</strong>, CON UBICACIONES ESTRATEGICAS DENTRO DEL CASCO URBANO COMO EN LA MESETA LO CUAL GARANTIZA UNA CONSTANTE APRECIACIÓN DE LA PROPIEDAD. Comprás TU DEPARTAMENTO CON ESCRITURA.
+          </p>
+        </div>
+      </div>
+
+      {/* Pilar 2: Rentabilidad Excepcional */}
+      <div className="bg-slate-50 p-8 rounded-2xl border-b-4 border-[#00d1ff] shadow-lg hover:shadow-xl transition-all flex flex-col justify-between">
+        <div>
+          <div className="w-12 h-12 bg-[#00d1ff] rounded-xl flex items-center justify-center mb-6 text-[#002D57]">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 className="text-lg font-black text-[#002D57] uppercase italic mb-4">Rentabilidad Excepcional en Dólares</h3>
+          <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-medium">
+            El constante flujo del sector energético en Añelo genera una demanda de alojamiento corporativo sin precedentes. 
+            Ofrecemos retornos de inversión líquidos de <strong className="text-[#00d1ff] font-black">entre el 15% y el 20% anual en dólares</strong>, duplicando y triplicando los rendimientos del mercado inmobiliario tradicional.
+          </p>
+        </div>
+      </div>
+
+      {/* Pilar 3: Inversión Pasiva */}
+      <div className="bg-slate-50 p-8 rounded-2xl border-b-4 border-[#002D57] shadow-lg hover:shadow-xl transition-all flex flex-col justify-between">
+        <div>
+          <div className="w-12 h-12 bg-[#002D57] rounded-xl flex items-center justify-center mb-6 text-[#00d1ff]">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+            </svg>
+          </div>
+          <h3 className="text-lg font-black text-[#002D57] uppercase italic mb-4">Inversión 100% Pasiva (Llave en Mano)</h3>
+          <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-medium">
+            Vos invertís, nosotros nos encargamos del resto. No tenés que preocuparte por conseguir inquilinos, contratos ni mantenimiento. 
+            Entregamos las unidades completamente equipadas y listas para operar bajo nuestro sistema de gestión. <strong className="text-[#002D57]">NOS ENCARGAMOS DE EL HOUSING, LA ADMINISTRACION Y EL SOPORTE DE POST VENTA.</strong>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    {/* 3. EL RESPALDO DE CRUX (POR QUÉ CONFIAR EN NOSOTROS) */}
+    <div className="border-t border-slate-100 pt-20">
+      <div className="text-center mb-16">
+        <h3 className="text-xl md:text-2xl font-black text-[#002D57] uppercase italic tracking-tight">
+          El Respaldo de Crux <span className="text-[#00d1ff]">Desarrollos</span>
+        </h3>
+        <p className="text-[10px] text-slate-400 uppercase tracking-widest mt-2 font-bold">Trayectoria y Solidez Real en la Región</p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        
+        {/* Respaldo 1 */}
+        <div className="space-y-4">
+          <h4 className="text-xs font-black text-[#002D57] uppercase tracking-wider border-b-2 border-[#00d1ff] pb-2 italic">
+            Experiencia en Construcción Tradicional
+          </h4>
+          <p className="text-xs text-slate-500 leading-relaxed font-medium">
+            Diseñamos y ejecutamos bajo los más altos estándares de calidad. Nuestras obras son 100% en construcción tradicional, garantizando durabilidad estructural, aislamiento térmico acústico superior y un bajísimo costo de mantenimiento a largo plazo.
+          </p>
+        </div>
+
+        {/* Respaldo 2 */}
+        <div className="space-y-4">
+          <h4 className="text-xs font-black text-[#002D57] uppercase tracking-wider border-b-2 border-[#00d1ff] pb-2 italic">
+            Trayectoria Probada en Añelo
+          </h4>
+          <p className="text-xs text-slate-500 leading-relaxed font-medium">
+            Conocemos el territorio y su dinámica como nadie. Con 4 complejos finalizados y entregados con éxito (Añelo Roots I, II, III y IV), demostramos solidez, cumplimiento de plazos y un profundo entendimiento de lo que el mercado corporativo exige.
+          </p>
+        </div>
+
+        {/* Respaldo 3 */}
+        <div className="space-y-4">
+          <h4 className="text-xs font-black text-[#002D57] uppercase tracking-wider border-b-2 border-[#00d1ff] pb-2 italic">
+            Gestión Comercial y Operativa Corporativa
+          </h4>
+          <p className="text-xs text-slate-500 leading-relaxed font-medium">
+            Nuestro diferencial no termina con la entrega de la llave. Contamos con una red comercial consolidada y alianzas con las principales empresas y operadoras de la industria del Gas & Petróleo. Nos encargamos de la negociación de contratos corporativos a largo plazo y de la gestión operativa diaria, asegurando una ocupación óptima y la continuidad de tu renta.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    {/* 4. LLAMADO A LA ACCIÓN (CTA) */}
+    <div className="bg-[#002D57] rounded-3xl p-10 md:p-16 text-center mt-24 shadow-2xl relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-32 h-32 bg-[#00d1ff] opacity-10 rounded-full blur-2xl transform translate-x-10 -translate-y-10"></div>
+      
+      <p className="text-base md:text-xl font-bold text-white uppercase italic max-w-2xl mx-auto tracking-tight leading-relaxed">
+        ¿Estás listo para hacer crecer tu capital en la región con mayor proyección del país?
+      </p>
+      
+      <div className="mt-8">
+        <a 
+          href="https://wa.me/541151454104?text=Hola!%20Quiero%20recibir%20información%20sobre%20las%20oportunidades%20de%20inversión%20en%20Vaca%20Muerta"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-[#25D366] text-white font-black text-xs uppercase tracking-[0.2em] px-8 py-4 rounded shadow-xl hover:bg-[#128C7E] transition-all transform hover:scale-105"
+        >
+          Hablar con un Asesor
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
