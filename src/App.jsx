@@ -69,25 +69,25 @@ const proyectos = [
       "/proyectos/roots-3/galeria7.jpeg",
     
     ],
-    tags: ["A estrenar", "16 Plazas"],
+    tags: ["16 Plazas"],
     servicios: ["4 Departamentos para 4 personas", "Habitaciones para 2 personas con baño en suite", "Aire Acondicionado / TV / Parrilla / Estacionamiento", "Servicio de Limpieza y Blanco", "Agua corriente / Cable e internet", "Totalmente equipados / Vajilla y electrodomesticos"]
   },
   { 
     name: "Añelo Roots IV", 
     loc: "Casco Urbano (Barrio Mirador)", 
-    status: "EN OBRA - MARZO 2026", 
+    status: "FINALIZADO", 
     desc: "4 Unidades Funcionales de ~55m² y 1 Unidad de ~87m². Incluye cocheras, parrilla propia y mobiliario completo premium.",
-    youtubeId: "",
+    youtubeId: "BydNmEBlwho",
     image: "/proyectos/roots-4/portada.png",
        gallery: [
-      "/proyectos/roots-4/galeria1.jpeg",
-      "/proyectos/roots-4/galeria2.jpeg",
-      "/proyectos/roots-4/galeria3.jpeg",
-      "/proyectos/roots-4/galeria4.jpeg",
-      "/proyectos/roots-4/galeria5.jpeg",
-      "/proyectos/roots-4/galeria6.jpeg"
+      "/proyectos/roots-4/foto1.jpeg",
+      "/proyectos/roots-4/foto2.jpeg",
+      "/proyectos/roots-4/foto3.jpeg",
+      "/proyectos/roots-4/foto4.jpeg",
+      "/proyectos/roots-4/foto5.jpeg",
+      "/proyectos/roots-4/foto6.jpeg"
     ],
-    tags: ["En Obra", "22 Plazas"],
+    tags: ["A Estrenar", "22 Plazas"],
     servicios: ["4 Deptos para 4 personas más un Depto para 6 personas", "Baños en Suite", "Aire Acondicionado / TV / Parrilla / Estacionamiento", "Servicio de limpieza / Gas Natural / Electricidad", "Agua corriente / Cable e internet", "Totalmente equipados / Vajilla y electrodomesticos" ],
   }
 ];
@@ -222,48 +222,56 @@ const proyectos = [
   </div>
 </header>
 
-
-      
 {/* BLOQUE CIFRAS DE VALOR */}
 <div className="relative z-20 px-6">
-  <div className="bg-white py-10 px-4 shadow-2xl mt-[-60px] max-w-7xl mx-auto rounded-xl grid grid-cols-2 md:grid-cols-5 gap-y-10 gap-x-4 text-center border-b-4 border-[#00d1ff]">
+  <div 
+    className="bg-white py-8 px-4 shadow-2xl max-w-7xl mx-auto rounded-xl text-center border-b-4 border-[#00d1ff]"
+    style={{ 
+      display: 'flex',
+      flexDirection: 'row',
+      flexWrap: 'nowrap',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      marginTop: '-15px', // Bajamos el bloque de -40px a -15px para despegarlo del botón
+      width: '100%'
+    }}
+  >
     
     {/* DATO 1: METROS */}
-    <div className="flex flex-col justify-center px-2">
-      <p className="text-2xl md:text-3xl lg:text-4xl font-black text-[#002D57] leading-none">1500m²</p>
-      <p className="text-[9px] md:text-[10px] uppercase tracking-[0.15em] text-slate-500 font-bold mt-3">Desarrollados</p>
+    <div style={{ flex: '1 1 0%', minWidth: '0px', padding: '0 4px' }}>
+      <p className="text-xl md:text-2xl lg:text-3xl font-black text-[#002D57] leading-none">1500m²</p>
+      <p className="text-[9px] uppercase tracking-[0.15em] text-slate-500 font-bold mt-3">Desarrollados</p>
     </div>
 
     {/* DATO 2: COMPLEJOS */}
-    <div className="flex flex-col justify-center border-l border-slate-100 px-2">
-      <p className="text-2xl md:text-3xl lg:text-4xl font-black text-[#002D57] leading-none">3</p>
-      <p className="text-[9px] md:text-[10px] uppercase tracking-[0.15em] text-slate-500 font-bold mt-3">Complejos Finalizados</p>
+    <div style={{ flex: '1 1 0%', minWidth: '0px', padding: '0 4px', borderLeft: '1px solid #f1f5f9' }}>
+      <p className="text-xl md:text-2xl lg:text-3xl font-black text-[#002D57] leading-none">4</p>
+      <p className="text-[9px] uppercase tracking-[0.15em] text-slate-500 font-bold mt-3">Complejos Finalizados</p>
     </div>
 
-    {/* DATO 3: SISTEMA CONSTRUCTIVO (NUEVO) */}
-    <div className="flex flex-col justify-center border-l border-slate-100 px-2">
-      <p className="text-2xl md:text-3xl lg:text-4xl font-black text-[#00d1ff] leading-none">100%</p>
-      <p className="text-[9px] md:text-[10px] uppercase tracking-[0.15em] text-[#002D57] font-black mt-3">Construcción Tradicional</p>
+    {/* DATO 3: SISTEMA CONSTRUCTIVO */}
+    <div style={{ flex: '1 1 0%', minWidth: '0px', padding: '0 4px', borderLeft: '1px solid #f1f5f9' }}>
+      <p className="text-xl md:text-2xl lg:text-3xl font-black text-[#00d1ff] leading-none">100%</p>
+      <p className="text-[9px] uppercase tracking-[0.15em] text-[#002D57] font-black mt-3">Construcción Tradicional</p>
     </div>
 
     {/* DATO 4: CAMAS */}
-    <div className="flex flex-col justify-center border-l border-slate-100 px-2">
-      <p className="text-2xl md:text-3xl lg:text-4xl font-black text-[#002D57] leading-none">50</p>
-      <p className="text-[9px] md:text-[10px] uppercase tracking-[0.15em] text-slate-500 font-bold mt-3">Camas Administradas</p>
+    <div style={{ flex: '1 1 0%', minWidth: '0px', padding: '0 4px', borderLeft: '1px solid #f1f5f9' }}>
+      <p className="text-xl md:text-2xl lg:text-3xl font-black text-[#002D57] leading-none">72</p>
+      <p className="text-[9px] uppercase tracking-[0.15em] text-slate-500 font-bold mt-3">Camas Administradas</p>
     </div>
 
-    {/* DATO 5: OBRA NUEVA */}
-    <div className="flex flex-col justify-center border-l border-slate-100 px-2">
-      <div className="flex items-center justify-center gap-1 mb-1">
-         <span className="flex h-2 w-2 rounded-full bg-orange-500 animate-pulse"></span>
-         <p className="text-2xl md:text-3xl lg:text-4xl font-black text-[#002D57] leading-none">22</p>
+    {/* DATO 5: ATENCIÓN / RESPUESTA CORPORATIVA */}
+    <div style={{ flex: '1 1 0%', minWidth: '0px', padding: '0 4px', borderLeft: '1px solid #f1f5f9' }}>
+      <div className="flex items-center justify-center gap-1">
+        <span className="flex h-1.5 w-1.5 rounded-full bg-[#00d1ff] animate-pulse"></span>
+        <p className="text-xl md:text-2xl lg:text-3xl font-black text-[#002D57] leading-none">24/7</p>
       </div>
-      <p className="text-[9px] md:text-[10px] uppercase tracking-[0.15em] text-orange-600 font-black mt-2">Camas en Ejecución 2026</p>
+      <p className="text-[9px] uppercase tracking-[0.15em] text-slate-500 font-bold mt-3">Soporte y Gestión</p>
     </div>
 
   </div>
 </div>
-    
 
       {/* PROYECTOS */}
     <section id="proyectos" className="py-20 px-6 max-w-7xl mx-auto">
