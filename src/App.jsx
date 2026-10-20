@@ -513,6 +513,14 @@ const proyectos = [
             className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
           />
         </div>
+   {/* MD  */}
+            <div className="w-[130px] md:w-auto flex justify-center group">
+          <img 
+            src="/clientes/logo_md-2.png" 
+            alt="MD Servicios" 
+            className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+          />
+        </div>
       </div>
 
     </div>
